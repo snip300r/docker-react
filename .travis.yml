@@ -7,3 +7,14 @@ before_install:
 
 script:
   - docker run shafik/docker-react npm run test -- --coverage
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-react"
+  env: "DockerReact-env"
+  bucket_name: "elasticbeanstalk-us-east-2-306419907743"
+  bucket_path: "docker-react"
+  on: 
+    branch: master
+    
