@@ -6,8 +6,7 @@ before_install:
   - docker build -t shafik/docker-react -f Dockerfile.dev . 
 
 script:
-  - docker run shafik/docker-react npm run test -- --coverage
-
+  - docker ps -a
 deploy:
   provider: elasticbeanstalk
   region: "us-east-2"
