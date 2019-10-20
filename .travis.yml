@@ -6,7 +6,7 @@ before_install:
   - docker build -t shafik/docker-react -f Dockerfile.dev . 
 
 script:
-  - docker run shafik/docker-react 
+  - docker ps -a
   # npm run test -- --coverage
 
 # deploy:
